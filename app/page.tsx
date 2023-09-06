@@ -5,6 +5,8 @@ import { useEffect, useState } from "react"
 
 export default function Home() {
 
+  const [isLoading, setLoading] = useState(true)
+
   const [obranaTime, setObranaTime] = useState(false);
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
@@ -34,17 +36,15 @@ export default function Home() {
       if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0) {
         setObranaTime(true);
       }
-    }, 1000)
 
+    setLoading(false);
+    }, 1000)
     return () => clearInterval(interval);
   }, [])
 
+  if (isLoading) return <h1>Spremi se</h1>
   return (
-   <div className="container">
-    <Head>
-      <title>Diplomski countdown</title>
-    </Head>
-
+  <div className="container">
     {obranaTime ? (
       <h1>Spremi novce za sljedecu godinu</h1>
     ) : (
@@ -76,6 +76,6 @@ export default function Home() {
       </div>
       </>
     )}
-   </div>
+  </div>
   )
 }
