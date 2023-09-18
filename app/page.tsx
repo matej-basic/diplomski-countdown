@@ -52,28 +52,28 @@ export default function Home() {
         <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
           <div className="flex flex-col text-3xl">
             <span className="countdown font-mono text-9xl">
-            //@ts-nocheck
+              {/* @ts-ignore */}
               <span style={{"--value":days}}></span>
             </span>
             days
           </div> 
           <div className="flex flex-col text-3xl">
             <span className="countdown font-mono text-9xl">
-            //@ts-nocheck
+              {/* @ts-ignore */}
               <span style={{"--value":hours}}></span>
             </span>
             hours
           </div> 
           <div className="flex flex-col text-3xl">
             <span className="countdown font-mono text-9xl">
-            //@ts-nocheck
+              {/* @ts-ignore */}
               <span style={{"--value":minutes}}></span>
             </span>
             min
           </div> 
           <div className="flex flex-col text-3xl">
             <span className="countdown font-mono text-9xl">
-            //@ts-nocheck
+              {/* @ts-ignore */}
               <span style={{"--value":seconds}}></span>
             </span>
             sec
